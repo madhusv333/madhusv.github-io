@@ -3,71 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madhu</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #77aaff 3px solid;
-        }
-        header a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-        nav {
-            float: right;
-            margin-top: 10px;
-        }
-        nav a {
-            margin: 0 20px;
-        }
-        #showcase {
-            min-height: 400px;
-            background: url('showcase.jpg') no-repeat 0 -400px;
-            text-align: center;
-            color: #fff;
-        }
-        #showcase h1 {
-            margin-top: 100px;
-            font-size: 55px;
-            margin-bottom: 10px;
-        }
-        #showcase p {
-            font-size: 20px;
-        }
-    </style>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>My Portfolio</h1>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
         </div>
-    </header>
-    <section id="showcase">
+    </nav>
+
+    <!-- Showcase Section -->
+    <section id="showcase" class="text-center text-light bg-dark py-5">
         <div class="container">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Check out my latest projects below.</p>
+            <h1 class="display-4 animate__animated animate__fadeInDown">Welcome to My Portfolio</h1>
+            <p class="lead animate__animated animate__fadeInUp">Check out my latest projects below.</p>
+            <a href="resume.pdf" download="YourName_Resume.pdf" class="btn btn-primary mt-3 animate__animated animate__fadeInUp">Download Resume</a>
         </div>
     </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center animate__animated animate__fadeInLeft">About Me</h2>
+            <p class="text-center animate__animated animate__fadeInRight">This is the about section where you can introduce yourself.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center animate__animated animate__fadeInLeft">My Projects</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card animate__animated animate__fadeInUp">
+                        <img src="images/project1.jpg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Project Title 1</h5>
+                            <p class="card-text">This is a brief description of Project 1. Highlight the main features, tools used, and any notable outcomes or results.</p>
+                            <a href="https://github.com/username/project1" target="_blank" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card animate__animated animate__fadeInUp">
+                        <img src="images/project2.jpg" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Project Title 2</h5>
+                            <p class="card-text">This is a brief description of Project 2. Highlight the main features, tools used, and any notable outcomes or results.</p>
+                            <a href="https://github.com/username/project2" target="_blank" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center animate__animated animate__fadeInLeft">Contact Me</h2>
+            <p class="text-center animate__animated animate__fadeInRight">You can reach me at <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+            <p class="text-center animate__animated animate__fadeInRight">123 Street Name, City, Country</p>
+            <div class="text-center animate__animated animate__fadeInRight">
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><img src="images/linkedin.png" alt="LinkedIn" class="social-icon"></a>
+                <a href="https://github.com/yourusername" target="_blank"><img src="images/github.png" alt="GitHub" class="social-icon"></a>
+                <a href="https://twitter.com/yourusername" target="_blank"><img src="images/twitter.png" alt="Twitter" class="social-icon"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Madhu S V</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
